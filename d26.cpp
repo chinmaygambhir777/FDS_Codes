@@ -14,7 +14,7 @@ parenthesized or not.
 using namespace std; 
 bool isWellParenthesized(string expression) { 
     stack<char> s; 
-    for (size_t i = 0; i < expression.length(); ++i) {
+    for (int i = 0; i < expression.length();i++) {
         char ch = expression[i];
         if (ch == '(' || ch == '{' || ch == '[') { 
             s.push(ch); 
