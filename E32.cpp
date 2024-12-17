@@ -48,7 +48,7 @@ public:
         if (qempty()) {
             cout << "\nSorry !!! order is not there. \n";
         } else {
-            cout << "\nDelivered orders as follows: \n";
+            //cout << "\nOrder served";
             
                 int item = porder[front];
                 if (front == rear) {
@@ -58,7 +58,7 @@ public:
                 }
                 cout << "Order served successfully! Order ID: " << item << endl;
             
-            cout << "\nTotal amount to pay: " << 100;
+            //cout << "\nTotal amount to pay: " << 100;
             cout << "\nThank you, visit again...\n";
         }
     }
@@ -67,7 +67,7 @@ public:
         if (qempty()) {
             cout << "\nSorry !! There is no pending order...\n";
         } else {
-            cout << "\nPending Orders as follows:\n";
+            cout << "\nFollowing orders are to deliver...\n";
             int temp = front;
             while (temp != rear) {
                 cout << "\t" << porder[temp];
@@ -98,13 +98,12 @@ int main() {
                 break;
 
             case 2:
-                cout << "\nOrder served";
-                
+                            
                 p1.serve_order();
                 break;
 
             case 3:
-                cout << "\nFollowing orders are in queue to deliver...\n";
+                
                 p1.order_in_queue();
                 break;
 
